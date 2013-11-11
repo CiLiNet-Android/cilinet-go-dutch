@@ -1,5 +1,7 @@
 <resources>
 
     <string name="app_name">Go Dutch</string>
+    
+    <string name="WelcomeInfo">欢迎 您使用AA费用小助手 !</string>
 
 </resources>
