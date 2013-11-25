@@ -14,10 +14,10 @@ public class FrameActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		/** 让界面全屏显示 **/
 		super.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		
-		super.setContentView(R.layout.include_main);
-		
+		super.setContentView(R.layout.include_main);	
 	}
 	
 	/** 添加页面主题区域方法 **/

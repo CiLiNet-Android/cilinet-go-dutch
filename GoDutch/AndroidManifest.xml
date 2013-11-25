@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme" >
         
         <!-- 主框架 -->
-        <activity android:name="cilinet.godutch.activity.MainActivity">
+        <activity android:name="cilinet.godutch.activity.IndexActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
