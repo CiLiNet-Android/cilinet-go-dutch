@@ -1,4 +1,4 @@
-package mobidever.godutch.activity;
+package cilinet.godutch.activity;
 
 import mobidever.godutch.activity.base.FrameActivity;
 import android.os.Bundle;
