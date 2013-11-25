@@ -1,4 +1,4 @@
-package mobidever.godutch.activity.base;
+package cilinet.godutch.activity.base;
 
 import mobidever.godutch.R;
 import android.os.Bundle;
