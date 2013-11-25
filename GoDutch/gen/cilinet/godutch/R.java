@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package mobidever.godutch;
+package cilinet.godutch;
 
 public final class R {
     public static final class attr {
