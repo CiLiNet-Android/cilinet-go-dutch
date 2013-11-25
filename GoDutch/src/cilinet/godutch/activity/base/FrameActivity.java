@@ -16,7 +16,7 @@ public class FrameActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		super.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		
-		super.setContentView(R.layout.activity_main);
+		super.setContentView(R.layout.include_main);
 		
 	}
 	
