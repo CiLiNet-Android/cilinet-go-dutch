@@ -1,8 +1,11 @@
 package cilinet.godutch.activity.base;
 
-import mobidever.godutch.R;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.Window;
+import android.widget.FrameLayout;
+import cilinet.godutch.R;
 
 
 /** 显示的基本框架 **/
@@ -15,6 +18,15 @@ public class FrameActivity extends BaseActivity {
 		
 		super.setContentView(R.layout.activity_main);
 		
+	}
+	
+	/** 添加页面主题区域方法 **/
+	protected void appendCenterMainBody(int resId){
+		FrameLayout _includeCenter = (FrameLayout)super.findViewById(R.id.include_center);
+		FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
+		
+		View _view = LayoutInflater.from(this).inflate(resId, null);
+		_includeCenter.addView(_view, layoutParams);
 	}
 
 }
