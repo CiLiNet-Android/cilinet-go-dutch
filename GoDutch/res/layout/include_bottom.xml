@@ -7,7 +7,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="68dp"
-        android:background="@drawable/bottom_bg" >
+        android:background="@drawable/bottom_bg"
+        android:id="@+id/lyot_bottomBar">
 
         <ImageView
             android:id="@+id/vImg_BottomIcon"
@@ -35,5 +36,19 @@
   			android:layout_centerVertical="true" />
         
     </RelativeLayout>
+    
+    <!-- 向上滑动的菜单 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lyot_bottomBar"
+        android:id="@+id/lyot_slideMenu">
+        
+        <!-- 因为很多地方都要用到ListView相同的样式，所以单独封装一个样式 -->
+        <ListView 
+            style="@style/CommonListView"
+            android:id="@+id/listV_slideMenu"/>
+        
+    </LinearLayout>
 
 </RelativeLayout>

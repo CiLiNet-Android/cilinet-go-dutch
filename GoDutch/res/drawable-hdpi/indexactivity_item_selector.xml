@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_pressed="true">
+        <!-- 被点击时，画一个矩形 -->
+        <shape>
+            <!-- 矩形的圆角 -->
+            <corners android:radius="4dp"/>
+            
+            <!-- 渐变色 
+            	startColor:渐变开始色
+            	endColor:渐变结束色
+            	angle:渐变角度
+            -->
+            <gradient 
+                android:startColor="#ffabb8c9" 
+                android:endColor="#ff6f84a3"
+                android:angle="270"/>
+        </shape>
+    </item>
+</selector>

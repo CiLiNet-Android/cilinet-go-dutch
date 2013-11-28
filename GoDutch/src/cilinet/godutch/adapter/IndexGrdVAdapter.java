@@ -1,40 +1,35 @@
 package cilinet.godutch.adapter;
 
-import cilinet.godutch.R;
+import java.util.ArrayList;
+import java.util.List;
+
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import cilinet.godutch.R;
+import cilinet.godutch.adapter.base.MyBaseAdapter;
 
-public class IndexGrdVAdapter extends BaseAdapter {
+public class IndexGrdVAdapter extends MyBaseAdapter {
 	
-	private Context mContext;
+	private static List<IndexGrdVItem> mIndexGrdVItems;
 	
-	private IndexGrdVItem[] mIndexGrdVItems;
-	
-	public IndexGrdVAdapter(Context context,IndexGrdVItem[] indexGrdVItems) {
-		this.mContext = context;
-		this.mIndexGrdVItems = indexGrdVItems;
-	}
-
-	@Override
-	public int getCount() {
-		return mIndexGrdVItems.length;
-	}
-
-	@Override
-	public Object getItem(int position) {
-		return mIndexGrdVItems[position];
-	}
-
-	@Override
-	public long getItemId(int position) {
-		return position;
+	/** 初始化图标和名称 **/
+	static {
+		mIndexGrdVItems = new ArrayList<IndexGrdVItem>();
+		mIndexGrdVItems.add(new IndexGrdVItem(R.drawable.grid_payout, R.string.appGridTextPayoutAdd));
+		mIndexGrdVItems.add(new IndexGrdVItem(R.drawable.grid_bill, R.string.appGridTextPayoutManage));
+		mIndexGrdVItems.add(new IndexGrdVItem(R.drawable.grid_report, R.string.appGridTextStatisticsManage));
+		mIndexGrdVItems.add(new IndexGrdVItem(R.drawable.grid_account_book, R.string.appGridTextAccountBookManage));	
+		mIndexGrdVItems.add(new IndexGrdVItem(R.drawable.grid_category, R.string.appGridTextCategoryManage));
+		mIndexGrdVItems.add(new IndexGrdVItem(R.drawable.grid_user, R.string.appGridTextUserManage));
 	}
 	
+	public IndexGrdVAdapter(Context context) {
+		super(context,mIndexGrdVItems);
+	}
+
 	/** 用于打包界面数据 **/
 	private class ViewHolder {
 		public ImageView itemIcon;
@@ -43,12 +38,12 @@ public class IndexGrdVAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		IndexGrdVItem _indexGrdVItem = mIndexGrdVItems[position];
+		IndexGrdVItem _indexGrdVItem = (IndexGrdVItem)super.getBoundDatas().get(position);
 		
-		ViewHolder _viewHolder;
+		ViewHolder _viewHolder = null;
 		
 		if(null == convertView){
-			convertView = LayoutInflater.from(mContext).inflate(R.layout.index_grdv_item, null);
+			convertView = super.getLayoutInflater().inflate(R.layout.index_grdv_item, null);
 			
 			_viewHolder = new ViewHolder();
 			_viewHolder.itemIcon = (ImageView)convertView.findViewById(R.id.imgV_indexItemIcon);

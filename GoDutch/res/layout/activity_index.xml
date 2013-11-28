@@ -9,6 +9,7 @@
         android:numColumns="3"
         android:layout_gravity="center_vertical"
         android:verticalSpacing="50dp"
+        android:listSelector="@drawable/indexactivity_item_selector"
         android:id="@+id/grdV_index"/>
 
 </FrameLayout>
