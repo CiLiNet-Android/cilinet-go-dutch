@@ -1,13 +1,17 @@
 package cilinet.godutch.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.Toast;
 import cilinet.godutch.R;
 import cilinet.godutch.activity.base.FrameActivity;
 import cilinet.godutch.adapter.IndexGrdVAdapter;
+import cilinet.godutch.adapter.SlideMenuItem;
+import cilinet.godutch.control.SlideMenuControl.OnSlideMenuItemClickListener;
 
 /** 主框架 **/
-public class IndexActivity extends FrameActivity {
+public class IndexActivity extends FrameActivity implements OnSlideMenuItemClickListener{
 	
 	IndexGrdVAdapter mIndexGrdVAdapter;
 	
@@ -35,6 +39,11 @@ public class IndexActivity extends FrameActivity {
 	
 	private void initIndexGrdVAdapter(){
 		 mIndexGrdVAdapter = new IndexGrdVAdapter(this);
+	}
+
+	@Override
+	public void onSlideMenuItemClick(View view, SlideMenuItem slideMenuItem) {
+		Toast.makeText(this, slideMenuItem.itemTitle, Toast.LENGTH_SHORT).show();
 	}
 	
 }

@@ -1,7 +1,8 @@
-package cilinet.godutch.util;
+package cilinet.godutch.utility;
 
 import android.content.Context;
 
+/** 像素单位转化工具 **/
 public class UnitTransformUtil {
 	/** * 根据手机的分辨率从 dp 的单位 转成为 px(像素) */
 	public static int dip2px(Context context, float dpvalue) {

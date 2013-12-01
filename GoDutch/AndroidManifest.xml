@@ -3,13 +3,23 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk 
+        android:minSdkVersion="8" 
+        android:targetSdkVersion="17"/>
+    
+    <!-- 单元测试配置之一 -->
+    <instrumentation 
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="cilinet.godutch"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+        <!-- 单元测试配置之二 -->
+        <uses-library android:name="android.test.runner"/>
         
         <!-- 主框架 -->
         <activity android:name="cilinet.godutch.activity.IndexActivity">
