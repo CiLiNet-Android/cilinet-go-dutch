@@ -38,7 +38,7 @@ public class IndexGrdVAdapter extends MyBaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		IndexGrdVItem _indexGrdVItem = (IndexGrdVItem)super.getBoundDatas().get(position);
+		IndexGrdVItem _indexGrdVItem = (IndexGrdVItem)super.getBoundData().get(position);
 		
 		ViewHolder _viewHolder = null;
 		

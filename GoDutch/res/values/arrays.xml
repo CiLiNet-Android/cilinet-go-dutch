@@ -51,11 +51,7 @@
         <item>导出表格</item>
     </string-array>
     <string-array name="SQLiteDALClassName">
-        <item>SQLiteDALUser</item>
-        <item>SQLiteDALAccountBook</item>
-        <item>SQLiteDALCategory</item>
-        <item>SQLiteDALPayout</item>
-        <item>SQLiteDALCreateView</item>
+        <item>PersonDAL</item>
     </string-array>
 
 </resources>

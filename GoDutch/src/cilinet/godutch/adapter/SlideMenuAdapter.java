@@ -21,7 +21,7 @@ public class SlideMenuAdapter extends MyBaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup viewGroup) {
-		SlideMenuItem _slideMenuItem = (SlideMenuItem)getBoundDatas().get(position);
+		SlideMenuItem _slideMenuItem = (SlideMenuItem)getBoundData().get(position);
 		
 		ViewHolder _viewHolder;
 		if(null == convertView){

@@ -11,24 +11,24 @@ import android.widget.BaseAdapter;
 /** 封装常用的Adapter **/
 public abstract class MyBaseAdapter extends BaseAdapter {
 
-	private List mBoundDatas;
+	private List mBoundData;
 	private Context mContext;
 	private LayoutInflater mLayoutInflater;
 	
 	public MyBaseAdapter(Context context,List boundDatas){
-		mBoundDatas = boundDatas;
+		mBoundData = boundDatas;
 		mContext = context;
 		mLayoutInflater = LayoutInflater.from(mContext);
 	}
 	
 	@Override
 	public int getCount() {
-		return mBoundDatas.size();
+		return mBoundData.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		return mBoundDatas.get(position);
+		return mBoundData.get(position);
 	}
 
 	@Override
@@ -40,10 +40,12 @@ public abstract class MyBaseAdapter extends BaseAdapter {
 		return mLayoutInflater;
 	}
 
-	public List getBoundDatas() {
-		return mBoundDatas;
+	public List getBoundData() {
+		return mBoundData;
 	}
 	
+	public void setBoundData(List boundData){
+		mBoundData = boundData;
+	}
 	
-
 }
