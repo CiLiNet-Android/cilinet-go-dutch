@@ -4,18 +4,16 @@ import java.util.List;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 
 /** 封装常用的Adapter **/
-public abstract class MyBaseAdapter extends BaseAdapter {
+public abstract class BaseAdapter extends android.widget.BaseAdapter {
 
-	private List mBoundData;
+	//问好为泛型中的类型限制符
+	private List<?> mBoundData;
 	private Context mContext;
 	private LayoutInflater mLayoutInflater;
 	
-	public MyBaseAdapter(Context context,List boundDatas){
+	public BaseAdapter(Context context,List<?> boundDatas){
 		mBoundData = boundDatas;
 		mContext = context;
 		mLayoutInflater = LayoutInflater.from(mContext);
@@ -40,12 +38,16 @@ public abstract class MyBaseAdapter extends BaseAdapter {
 		return mLayoutInflater;
 	}
 
-	public List getBoundData() {
+	public List<?> getBoundData() {
 		return mBoundData;
 	}
 	
-	public void setBoundData(List boundData){
+	public void setBoundData(List<?> boundData){
 		mBoundData = boundData;
+	}
+	
+	protected Context getContext(){
+		return mContext;
 	}
 	
 }

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:stretchColumns="0,1"
+        android:id="@+id/tablot_bottomButtonBox">
+     
+        <TableRow>
+            <Button 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ButtonTextSave"
+                android:id="@+id/btn_savePayout"/>
+            
+            <Button 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ButtonTextCancel"
+                android:id="@+id/btn_cancelSavePayout"/>
+        </TableRow>
+        
+    </TableLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tablot_bottomButtonBox">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/box">
+            
+            <!-- 选择账本 -->
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/account_book_small_icon"
+                    android:id="@+id/imgV_accountBookSmallIcon"/>
+                
+                <Button 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/ButtonTextSelectAccountBook"
+                    android:id="@+id/btn_selectAccountBook"/>
+                
+                <EditText 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_selectAccountBook"
+                    android:layout_toRightOf="@id/imgV_accountBookSmallIcon"
+                    android:layout_alignBottom="@id/btn_selectAccountBook"
+                    android:focusable="false"
+                    android:id="@+id/edtTxt_selectAccountBook"/><!-- 取消焦点，使其不可编辑 -->
+                
+            </RelativeLayout>
+            
+            <!-- 输入金额 -->
+            <RelativeLayout 
+                android:layout_width="match_parent"
+			  	android:layout_height="wrap_content">
+                
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:src="@drawable/payout_small_icon"
+					android:id="@+id/imgV_payoutSmallIcon"/>
+				
+				<Button 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/ButtonTextEnterAmount"
+					android:layout_alignParentRight="true"
+					android:id="@+id/btn_selectAmount"/>
+				
+			  	<EditText
+			  		android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_toLeftOf="@id/btn_selectAmount"
+					android:layout_toRightOf="@id/imgV_payoutSmallIcon"
+					android:layout_alignBottom="@id/btn_selectAmount"
+					android:inputType="numberDecimal"
+					android:hint="@string/HintEnterAmount"
+					android:maxLength="5"
+					android:id="@+id/edtTxt_selectAmount"/>
+			  </RelativeLayout>
+			  
+            <!-- 选择类别 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/category_small_icon" 
+                    android:id="@+id/imgV_categorySmallIcon"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/ButtonTextSelectCategory" 
+                    android:id="@+id/btn_selectCategory"/>
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_selectCategory"
+                    android:layout_toRightOf="@id/imgV_categorySmallIcon"
+                    android:layout_alignBottom="@id/btn_selectCategory"
+                    android:completionThreshold="1"
+                    android:dropDownWidth="match_parent"
+                    android:hint="@string/HintEnterCategory"
+                    android:singleLine="true"
+                    android:textColor="#ff000000" 
+                    android:id="@+id/atoComptEdtTxt_categoryName"/>
+            </RelativeLayout>
+
+            <!-- 选择日期 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/ButtonTextSelectPayoutDate" 
+                    android:id="@+id/btn_selectPayoutDate"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_selectPayoutDate"
+                    android:layout_alignBottom="@id/btn_selectPayoutDate"
+                    android:focusable="false" 
+                    android:id="@+id/edtTxt_selectPayoutDate"/>
+            </RelativeLayout>
+            
+            <!-- 计算方式 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/ButtonTextSelectPayoutType" 
+                    android:id="@+id/btn_selectPayoutType"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_selectPayoutType"
+                    android:layout_alignBottom="@id/btn_selectPayoutType"
+                    android:focusable="false" 
+                    android:id="@+id/edtTxt_PayoutType"/>
+            </RelativeLayout>
+            
+            <!-- 选择消费人 -->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/ButtonTextSelectUser" 
+                    android:id="@+id/btn_selectUser"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@id/btn_selectUser"
+                    android:focusable="false"
+                    android:hint="@string/HintSelectUser" 
+                    android:id="@+id/edtTxt_payoutUser"/>
+
+            </RelativeLayout>
+            
+            <!-- 备注 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="fill_horizontal"
+                    android:hint="@string/HintEnterComment"
+                    android:lines="7"
+                    android:maxLength="301" 
+                    android:id="@+id/edtTxt_comment"/>
+            </LinearLayout>
+
+		</LinearLayout>
+        
+    </ScrollView>
+
+</RelativeLayout>

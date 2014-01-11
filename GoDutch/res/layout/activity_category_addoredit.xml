@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="5dp" 
+        android:id="@+id/lyot_MainBody">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            style="@style/CommonListViewItem"
+            android:text="@string/TextViewTextCategoryName" 
+            android:id="@+id/txtV_categoryName"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLength="20" 
+            android:id="@+id/edTxt_CategoryName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            style="@style/CommonListViewItem"
+            android:text="@string/TextViewTextParentID" 
+            android:id="@+id/txtV_parentID"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" 
+            android:id="@+id/spiner_parentID"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:stretchColumns="0,1" >
+
+        <TableRow>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ButtonTextSave" 
+                android:id="@+id/btn_saveCategory"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ButtonTextCancel" 
+                android:id="@+id/btn_cancelSaveCategory"/>
+        </TableRow>
+        
+    </TableLayout>
+
+</RelativeLayout>

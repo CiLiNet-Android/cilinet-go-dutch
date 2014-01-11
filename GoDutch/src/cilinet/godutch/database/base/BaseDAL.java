@@ -93,7 +93,7 @@ public abstract class BaseDAL implements SQLiteDatabaseOpenHelper.SQLiteTableOpe
 		return _count;
 	}
 	
-	protected void execSql(String sql,Object[] bindArgs){
+	public void execSql(String sql,Object[] bindArgs){
 		if(null == bindArgs){
 			getSQLiteDatabase().execSQL(sql);
 		}else {
@@ -132,7 +132,7 @@ public abstract class BaseDAL implements SQLiteDatabaseOpenHelper.SQLiteTableOpe
 	}
 	
 	/** 获取上下文 **/
-	public Context getContext(){
+	protected Context getContext(){
 		return mContext;
 	}
 	

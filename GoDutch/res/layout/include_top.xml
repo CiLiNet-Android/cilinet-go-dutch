@@ -13,7 +13,17 @@
         android:textColor="@color/black"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txtV_topBarTitle"/>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="5dp"
+        android:src="@drawable/app_back"
+        android:id="@+id/imgV_topBarBackImg"/>
     
 
 </RelativeLayout>

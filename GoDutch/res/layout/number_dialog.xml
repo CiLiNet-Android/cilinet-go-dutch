@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_alignParentTop="true"
+        android:text="@string/ButtonTextDot" 
+        android:id="@+id/btnDot"/>
+
+    <EditText
+        android:layout_width="188dp"
+        android:layout_height="63dp"
+        android:layout_toRightOf="@id/btnDot"
+        android:focusable="false"
+        android:gravity="center_horizontal" 
+        android:id="@+id/txtDisplay"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/txtDisplay"
+        android:text="@string/ButtonTextOne" 
+        android:id="@+id/btnOne"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/txtDisplay"
+        android:layout_toRightOf="@id/btnOne"
+        android:text="@string/ButtonTextTwo" 
+        android:id="@+id/btnTwo"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/txtDisplay"
+        android:layout_toRightOf="@id/btnTwo"
+        android:text="@string/ButtonTextThree" 
+        android:id="@+id/btnThree"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/txtDisplay"
+        android:layout_toRightOf="@id/btnThree"
+        android:text="@string/ButtonTextFour" 
+        android:id="@+id/btnFour"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/btnOne"
+        android:text="@string/ButtonTextFive" 
+        android:id="@+id/btnFive"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/btnOne"
+        android:layout_toRightOf="@id/btnFive"
+        android:text="@string/ButtonTextSix"
+        android:id="@+id/btnSix" />
+
+    <Button
+        style="@style/DialogNumberButton"        
+        android:layout_below="@id/btnOne"
+        android:layout_toRightOf="@id/btnSix"
+        android:text="@string/ButtonTextSeven" 
+        android:id="@+id/btnSeven"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/btnOne"
+        android:layout_toRightOf="@id/btnSeven"
+        android:text="@string/ButtonTextEight" 
+        android:id="@+id/btnEight"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/btnFive"
+        android:text="@string/ButtonTextNine" 
+        android:id="@+id/btnNine"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/btnFive"
+        android:layout_toRightOf="@id/btnNine"
+        android:text="@string/ButtonTextZero" 
+        android:id="@+id/btnZero"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/btnFive"
+        android:layout_toRightOf="@id/btnZero"
+        android:text="@string/ButtonTextChange" 
+        android:id="@+id/btnChange"/>
+
+    <Button
+        style="@style/DialogNumberButton"
+        android:layout_below="@id/btnFive"
+        android:layout_toRightOf="@id/btnChange"
+        android:text="@string/ButtonTextOk" 
+        android:id="@+id/btnOk"/>
+
+</RelativeLayout>

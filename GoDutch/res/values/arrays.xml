@@ -52,6 +52,10 @@
     </string-array>
     <string-array name="SQLiteDALClassName">
         <item>PersonDAL</item>
+        <item>AccountBookDAL</item>
+        <item>CategoryDAL</item>
+        <item>PayoutDAL</item>
+        <item>CreatePayoutViewDAL</item>
     </string-array>
 
 </resources>

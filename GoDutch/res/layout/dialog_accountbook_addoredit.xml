@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 账本名称 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/HintAccountBookName"
+        android:maxLength="20" 
+        android:id="@+id/edTxt_accountBookName"/>
+
+    <!-- 是否默认 -->
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CheckBoxTextIsDefault"
+        android:textColor="#000000" 
+        android:id="@+id/chkBox_isDefault"/>
+
+</LinearLayout>

@@ -56,7 +56,7 @@ public class SlideMenuControl {
 	}
 	
 	/** 根据当前情况滑动 **/
-	private void slide(){
+	public void slide(){
 		if(mIsSlideUp){//如果已经滑动到顶部，则向下滑动
 			slideDown();
 		}else {
@@ -70,9 +70,11 @@ public class SlideMenuControl {
 	}
 	
 	private void init(){
+		initView();
+		//只有实现了OnSlideMenuItemClickListener接口，才有底部监听事件和ListView
 		if(mActivity instanceof OnSlideMenuItemClickListener){
 			mSlideMenuItemClickListener = (OnSlideMenuItemClickListener)mActivity;
-			initView();
+			initSlideMenu();
 		}
 	
 	}
@@ -80,6 +82,10 @@ public class SlideMenuControl {
 	/** 视图初始化 **/
 	private void initView(){
 		include_bottom = (RelativeLayout)mActivity.findViewById(R.id.include_bottom);
+	}
+	
+	/** 初始化菜单 **/
+	private void initSlideMenu(){
 		include_bottom.setFocusableInTouchMode(true);//键盘点击时，让该控件获得焦点
 		include_bottom.setOnClickListener(new OnSlideMenuClickListener());
 		include_bottom.setOnKeyListener(new View.OnKeyListener() {
@@ -118,5 +124,12 @@ public class SlideMenuControl {
 	public interface OnSlideMenuItemClickListener {
 		//参数由SlideMenuContorl传给实现类
 		public void onSlideMenuItemClick(View view,SlideMenuItem slideMenuItem) ;
+	}
+
+	public void removeSelf() {
+		RelativeLayout lyot_includeMain = (RelativeLayout)mActivity.findViewById(R.id.lyot_includeMain);
+		lyot_includeMain.removeViewInLayout(include_bottom);
+		
+		include_bottom = null;
 	}
 }

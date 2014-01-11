@@ -38,7 +38,7 @@ public class PersonDAL extends BaseDAL{
 	}
 	
 	/** 增 **/
-	public boolean insertUser(PersonModel personModel){
+	public boolean insertPerson(PersonModel personModel){
 		ContentValues _contentValues = createContentValuesFromModel(personModel);
 		long _newPersonId = getSQLiteDatabase().insert(TABLE.TABLE_NAME, null, _contentValues);
 		personModel.personId = (int)_newPersonId;
@@ -46,13 +46,33 @@ public class PersonDAL extends BaseDAL{
 		return  _newPersonId > 0;
 	}
 	
-	/** 删 **/
-	public boolean deleteUser(Map<String,String> whereConditions){
+	/** 更新 **/
+	public boolean updatePerson(PersonModel personModel){
+		ContentValues _contentValues = createContentValuesFromModel(personModel);
+		int _updatedRows = getSQLiteDatabase().update(TABLE.TABLE_NAME, _contentValues, TABLE.COLUMN_PERSONID + "=?", new String[]{String.valueOf(personModel.personId)});
+		
+		return _updatedRows > 0;
+	}
+	
+	/** 删 
+	 * key=columnField=?
+	 * value=实际值
+	 * 
+	 * **/
+	public boolean deletePerson(Map<String,String> whereConditions){
 		return super.delete(TABLE.TABLE_NAME, whereConditions);
 	}
 	
-	/** 更新 **/
-	//public boolean updateUser(){}
+	/** 逻辑删除用户 **/
+	public boolean disablePersonByPersonId(int personId){
+		ContentValues _contentValues = new ContentValues();
+		_contentValues.put(TABLE.COLUMN_STATE, 0);
+		
+		int _updatedRows = getSQLiteDatabase().update(TABLE.TABLE_NAME, _contentValues, TABLE.COLUMN_PERSONID + "=?", new String[]{String.valueOf(personId)});
+		
+		return _updatedRows > 0;
+	}
+	
 	
 	/** 查询用户 **/
 	public List<PersonModel> queryPerson(String condition){

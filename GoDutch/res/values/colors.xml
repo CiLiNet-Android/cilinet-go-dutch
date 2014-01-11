@@ -3,6 +3,10 @@
 
     <!-- 黑色 -->
     <color name="black">#000000</color>
+    
+    <!-- 蓝色 -->
+    <color name="blue">#FFDEE7F7</color>
+    
     <!-- 亮天蓝色 -->
     <color name="lightskyblue">#2190a3</color>
     <!-- 天蓝色 -->

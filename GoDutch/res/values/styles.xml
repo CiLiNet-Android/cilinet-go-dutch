@@ -25,5 +25,19 @@
         <item name="android:cacheColorHint">@color/transparent</item>
     </style>
     
+    <style name="CommonListViewItem">
+		<item name="android:textSize">20sp</item>
+		<item name="android:textColor">#ff000000</item>
+	</style>
+	
+    <style name="DialogNumberButton">
+        <item name="android:layout_width">63dp</item>
+        <item name="android:layout_height">63dp</item>
+        <item name="android:textSize">22sp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">#ff000000</item>
+		<item name="android:background">@drawable/number_selector</item>
+    </style>
+    
 
 </resources>

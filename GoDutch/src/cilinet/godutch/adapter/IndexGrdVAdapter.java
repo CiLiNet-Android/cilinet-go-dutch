@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cilinet.godutch.R;
-import cilinet.godutch.adapter.base.MyBaseAdapter;
+import cilinet.godutch.adapter.base.BaseAdapter;
 
-public class IndexGrdVAdapter extends MyBaseAdapter {
+public class IndexGrdVAdapter extends BaseAdapter {
 	
 	private static List<IndexGrdVItem> mIndexGrdVItems;
 	

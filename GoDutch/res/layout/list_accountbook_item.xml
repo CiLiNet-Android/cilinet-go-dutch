@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="60dp"
+    android:background="@drawable/listview_selector"
+    android:gravity="center_vertical">
+    
+    <!-- 账本图标 -->
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/imgV_accountBookIcon"/>
+    
+    <!-- 账本名称 -->
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CommonListViewItem"
+        android:layout_toRightOf="@id/imgV_accountBookIcon"
+        android:id="@+id/txtV_accountBookName"/>
+    
+    <!-- 账本包含的消费笔数 -->
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:paddingTop="12dp"
+        android:textColor="#ff000000"
+        android:id="@+id/txtV_accountBookConsumeTimes"/>
+    
+    <!-- 合计消费金额 -->
+    <TextView 
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/txtV_accountBookName"
+		android:layout_toRightOf="@id/imgV_accountBookIcon"
+        android:textColor="#ff666666"
+        android:id="@+id/txtV_accountBookConsumeMoney"/>
+
+</RelativeLayout>

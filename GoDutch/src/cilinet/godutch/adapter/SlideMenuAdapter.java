@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import cilinet.godutch.R;
-import cilinet.godutch.adapter.base.MyBaseAdapter;
+import cilinet.godutch.adapter.base.BaseAdapter;
 
-public class SlideMenuAdapter extends MyBaseAdapter {
+public class SlideMenuAdapter extends BaseAdapter {
 
 	public SlideMenuAdapter(Context context, List<SlideMenuItem> boundDatas) {
 		super(context, boundDatas);
